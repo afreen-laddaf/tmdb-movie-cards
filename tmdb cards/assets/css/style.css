@@ -1,0 +1,56 @@
+#moviePostContainer.card{
+    overflow: hidden;
+    height: 450px;
+}
+.movieCard{
+    height: 450px;
+   overflow: hidden;
+   
+}
+.movieCard img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+}
+.titleInfo{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background:#22254b;
+    width: 100%;
+    padding: 15px;
+    color: #fff;
+    
+}
+.overview{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 100%;
+    padding: 20px;
+    /* transform: translateY(100%);
+    opacity: 0; */
+    transform: scale(0);
+    opacity: 0;
+    transition: all .4s ease-in-out;  
+
+} 
+
+.movieCard:is(:hover, :active, :focus) .overview{
+    /* transform: translateY(0%); */
+    transform: scale(1);
+    opacity: 1;
+
+}
+
+.titleInfo h2{
+    height: 40px;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
